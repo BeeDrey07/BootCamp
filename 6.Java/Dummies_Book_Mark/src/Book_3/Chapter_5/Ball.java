@@ -1,0 +1,36 @@
+package Book_3.Chapter_5;
+
+public abstract class Ball {
+    public abstract void hit(int batSpeed);
+
+    public static void main(String[] args) {
+        BaseBall bb = new BaseBall();
+        bb.hit(50);
+        SoftBall sb = new SoftBall();
+        sb.hit(30);
+
+//        BallFactory bf = new BallFactory();
+//        Ball newBall1 = bf.getBall("baseball");
+//        Ball newBall2 = bf.getBall("softball");
+
+    }
+}
+// If you extend an abstract class you must implement and override all the methods in the abstract class.
+class BaseBall extends Ball {
+    @Override
+    public void hit(int batSpeed) {
+        System.out.println("You hit the baseball at " + batSpeed + " km/h");
+    }
+}
+
+class SoftBall extends Ball {
+    @Override
+    public void hit(int batSpeed) {
+        System.out.println("You hit the softball at " + batSpeed + " km/h");
+    }
+}
+
+// OR you must create another abstract class.
+//abstract class BaseBall extends Ball {
+//
+//}

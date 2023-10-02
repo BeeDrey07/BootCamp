@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javagroupA">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javagroupA/out/artifacts/javagroupA_jar/javagroupA.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
