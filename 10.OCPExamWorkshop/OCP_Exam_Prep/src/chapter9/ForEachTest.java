@@ -9,5 +9,6 @@ public class ForEachTest {
         Collection<String> cats = List.of("Annie", "Ripley");
         cats.forEach(System.out::println);
         cats.forEach(s -> System.out.println(s));
+        System.out.println("Testing123");
     }
 }
