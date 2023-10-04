@@ -15,6 +15,7 @@ public class TimeTester {
 //        System.out.println("\nMonthDay: " + MonthDay.now().toString());
 //        System.out.println("\nYearMonth: " + YearMonth.now().toString());
 //        System.out.println("\nInstant: " + Instant.now().toString());
+
 //        LocalDate d = LocalDate.parse("2014-12-15");
 //        System.out.println(d);
 //        try {
@@ -23,10 +24,13 @@ public class TimeTester {
 //        } catch (DateTimeParseException e) {
 //            System.out.println(e.getLocalizedMessage());
 //        }
+
 //        LocalDate date = LocalDate.of(2023,9,4);
 //        System.out.println(date);
+
 //        LocalDate date = LocalDate.of(2023, Month.SEPTEMBER, 4);
 //        System.out.println(date);
+
 //        for (String id : ZoneId.getAvailableZoneIds())
 //            System.out.println(id);
 //        ZoneId z = ZoneId.of("America/Los_Angeles");
@@ -35,17 +39,18 @@ public class TimeTester {
 //        zdate = ZonedDateTime.of(2014, 12, 15, 0, 0, 0, 0,
 //                ZoneId.of("America/Los_Angeles"));
 //        System.out.println(zdate);
-//        ZoneOffset z = ZoneOffset.ofHours(-8);
-//        OffsetTime o = OffsetTime.of(12,30,0,0,zo);
-//        System.out.println(o);
+
 //        ZoneOffset zo = ZoneOffset.of("-08:00");
-//        OffsetTime o = OffsetTime.of(12,30,0,0,zo);
-//        System.out.println(0);
+//        ZoneOffset z = ZoneOffset.ofHours(-8);
+//        OffsetTime o = OffsetTime.of(12,30,0,0,z);
+//        System.out.println(o);
+
 //        LocalDate date = LocalDate.now();
 //        System.out.println(date.getYear());
 //        System.out.println(date.getMonthValue());
 //        System.out.println(date.getDayOfMonth());
 //        System.out.println(date.getDayOfYear());
+
 //        if (LocalDate.now() == LocalDate.now()) {
 //            System.out.println("All is right in the universe!");
 //        } else {
@@ -56,16 +61,20 @@ public class TimeTester {
 //        } else {
 //            System.out.println("Something is wrong in the universe!");
 //        }
+
 //        if (LocalDate.now().getDayOfMonth() < 15)
 //            System.out.println("It is not yet the 15th.");
+
 //        System.out.println("Today's date is " + LocalDate.now());
 //        System.out.println("Tomorrow is " + LocalDate.now().plusDays(1));
 //        System.out.println("Next week's date is " + LocalDate.now().plusWeeks(1));
 //        System.out.println("Next Month's date is " + LocalDate.now().plusMonths(1));
 //        System.out.println("Next Year's date is " + LocalDate.now().plusYears(1));
+
 //        LocalDate date1 = LocalDate.parse("2023-09-04");
 //        LocalDate date2 = LocalDate.parse("2024-07-25");
 //        System.out.println(date1.until(date2, ChronoUnit.DAYS));
+
 //        LocalDate today = LocalDate.now();
 //        LocalDate invDate = LocalDate.of(today.getYear(),
 //                today.getMonthValue(), 15);
@@ -75,6 +84,7 @@ public class TimeTester {
 //                ChronoUnit.DAYS);
 //        System.out.println(daysToInvoice
 //                + " until next invoice date.");
+
 //        DateTimeFormatter formatter;
 //        formatter = DateTimeFormatter.ofPattern("dd MMM YYYY");
 //        LocalDate date = LocalDate.now();
@@ -96,5 +106,3 @@ public class TimeTester {
             System.out.println(pattern + " " + date.format(f));
         }
     }
-//    }
-//}

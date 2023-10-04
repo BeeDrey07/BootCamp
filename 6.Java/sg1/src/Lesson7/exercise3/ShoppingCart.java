@@ -1,4 +1,4 @@
-package Lesson7.exercise3;
+package lesson7.exercise3;
 
 public class ShoppingCart {
     public static void main(String[] args){
