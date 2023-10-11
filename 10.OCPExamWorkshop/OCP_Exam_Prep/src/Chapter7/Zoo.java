@@ -13,7 +13,7 @@ interface ZooRenovation {
 public class Zoo implements ZooRenovation {
     @Override
     public String projectName() {
-        return "Zoo Test";
+        return "Zoo.properties Test";
     }
 
     @Override

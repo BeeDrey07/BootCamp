@@ -1,5 +1,6 @@
 package chapter10;
 
+import java.util.IntSummaryStatistics;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
 import java.util.stream.DoubleStream;
@@ -20,12 +21,20 @@ public class PrimitiveOptionalTest {
 //        stream.min();
         IntStream stream = IntStream.of(1, 2, 3);
         IntStream stream2 = IntStream.of();
-        System.out.println(max(stream));
-        System.out.println(max(stream2));
+        System.out.println(sum(stream));
+        System.out.println(sum(stream2));
     }
 
     private static int max(IntStream ints) {
         OptionalInt optional = ints.max();
         return optional.orElseThrow(RuntimeException::new);
+    }
+
+    private static double sum(IntStream ints) {
+        IntSummaryStatistics stats = ints.summaryStatistics();
+        if (stats.getCount() == 0) {
+            throw new RuntimeException();
+        }
+        return stats.getSum();
     }
 }
