@@ -1,0 +1,48 @@
+spring:
+  security:
+    user:
+      name: buzz
+      password: infinity
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
+
+taco:
+  orders:
+    pageSize: 100
+
+
+  discount:
+    codes:
+      abcdef: 10
+
+
+---
+spring:
+  profiles: prod
+
+  datasource:
+    url: jdbc:mysql://localhost/tacocloud
+    username: tacouser
+    password: tacopassword
+
+logging:
+  level:
+    tacos: WARN
+--- 
+server:
+    port: 9090
+    ssl:
+        key-store: file:///C:/Users/Bianca/Documents/Bootcamp/9.SpringFramework/spring-in-action-6-samples-main/ch06/taco-cloud/mykeys.jks
+        key-store-password: hellohi
+        key-password: hellohi
+---
+logging:
+  file:
+      path: /var/logs/
+      file: TacoCloud.log
+  level:
+      root: WARN
+      org:
+      springframework:
+          security: DEBUG

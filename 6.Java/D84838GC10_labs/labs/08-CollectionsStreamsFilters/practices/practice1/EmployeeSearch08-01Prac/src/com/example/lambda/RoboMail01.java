@@ -10,26 +10,6 @@ import java.util.function.Predicate;
  * This is updated class for anonymous inner classes.
  */
 public class RoboMail01 {
-  
-  public void mail(
-    List<Employee> pl, Predicate<Employee> pred){
-    
-    for(Employee e:pl){
-      if (pred.test(e)){
-        roboMail(e);
-      }
-    }
-  }
-  
-  public void text(
-    List<Employee> pl, Predicate<Employee> pred){
-    
-    for(Employee e:pl){
-      if (pred.test(e)){
-        roboText(e);
-      }
-    }
-  }
     
   public void roboMail(Employee p){
     System.out.println("Emailing: " + p.getGivenName() 
@@ -42,4 +22,5 @@ public class RoboMail01 {
       + " " + p.getSurName() + " age " + p.getAge()
       + " at " + p.getPhone());
   }
+  
 }

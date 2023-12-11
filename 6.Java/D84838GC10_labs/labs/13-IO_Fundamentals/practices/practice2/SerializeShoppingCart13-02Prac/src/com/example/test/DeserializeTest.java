@@ -1,14 +1,19 @@
 package com.example.test;
 
+import com.example.domain.Item;
 import com.example.domain.ShoppingCart;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.text.NumberFormat;
+import java.util.List;
 
 public class DeserializeTest {
 
     public static void main(String[] args) {
-        String directory = "/home/oracle/labs/13-IO_Fundamentals/practices/practice2/SerializeShoppingCart";
+        String directory = "C:\\Users\\Bianca\\Documents\\Bootcamp\\6.Java\\D84838GC10_labs\\labs\\13-IO_Fundamentals\\practices\\practice2\\SerializeShoppingCart13-02Prac";
         String cartId = null;
         System.out.println("Enter the ID of the cart file to deserialize or q exit.");
         // Wrap the System.in InputStream with a BufferedReader to read
@@ -27,5 +32,19 @@ public class DeserializeTest {
         String cartFile = directory + "cart" + cartId + ".ser";
         ShoppingCart cart = null;
         // Your code goes here....
+        try (FileInputStream fis = new FileInputStream(cartFile); ObjectInputStream in = new ObjectInputStream(fis)) {
+            cart = (ShoppingCart) in.readObject();
+        } catch (ClassNotFoundException | IOException e) {
+            System.out.println("Exception deserialising " + cartFile + ": " + e);
+            System.exit(-1);
+        }
+        System.out.println("Successfully deserialised shopping cart with ID: " + cart.getCartID());
+
+        System.out.println("Shopping Cart contains: ");
+        List<Item> cartContents = cart.getItems();
+        for (Item item : cartContents) {
+            System.out.println(item);
+        }
+        System.out.println("Shopping Cart Total: " + NumberFormat.getCurrencyInstance().format(cart.getCartTotal()));
     }
 }

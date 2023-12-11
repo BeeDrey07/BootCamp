@@ -1,7 +1,11 @@
 package com.example.client;
 
+import java.io.IOException;
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -11,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class NetworkClientMain {
 
     public static void main(String[] args) {
-//        //Single-threaded version
+        //Single-threaded version
 //        String host = "localhost";
 //        for (int port = 10000; port < 10010; port++) {
 //            RequestResponse lookup = new RequestResponse(host, port);
@@ -38,7 +42,7 @@ public class NetworkClientMain {
             callables.put(lookup, future);
         }
 
-        //Stop accepting new Callables
+//        Stop accepting new Callables
         es.shutdown();
 
         try {

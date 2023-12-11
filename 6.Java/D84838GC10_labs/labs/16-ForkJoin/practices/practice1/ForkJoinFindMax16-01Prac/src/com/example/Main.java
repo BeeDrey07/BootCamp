@@ -14,18 +14,22 @@ public class Main {
             data[i] = ThreadLocalRandom.current().nextInt();
         }
 
-//        int max = Integer.MIN_VALUE;
-//        for (int value : data) {
-//            if (value > max) {
-//                max = value;
-//            }
-//        }
-//        System.out.println("Max value found:" + max);
-        
+        int max = Integer.MIN_VALUE;
+        for (int value : data) {
+            if (value > max) {
+                max = value;
+            }
+        }
+        System.out.println("Max value found:" + max);
+
         ForkJoinPool pool = new ForkJoinPool();
-        FindMaxTask task = new FindMaxTask(data, 0, data.length-1, data.length/16);
+
+        RandomArrayAction action = new RandomArrayAction(data, 0, data.length - 1, data.length / 16);
+        pool.invoke(action);
+
+        FindMaxTask task = new FindMaxTask(data, 0, data.length - 1, data.length / 16);
         Integer result = pool.invoke(task);
         System.out.println("Max value found:" + result);
-        
+
     }
 }

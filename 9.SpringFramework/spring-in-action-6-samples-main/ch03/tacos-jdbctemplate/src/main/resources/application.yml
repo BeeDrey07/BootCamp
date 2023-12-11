@@ -1,0 +1,8 @@
+#tag::setDatabaseName[]
+spring:
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
+server:
+  port : 3000
+#end::setDatabaseName[]

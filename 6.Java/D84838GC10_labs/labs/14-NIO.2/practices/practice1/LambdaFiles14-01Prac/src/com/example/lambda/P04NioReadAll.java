@@ -12,27 +12,35 @@ import java.util.stream.Stream;
  * @author oracle
  */
 public class P04NioReadAll {
-  public static void main(String[] args) {
-        
-    Path file =  Paths.get("hamlet.txt");
-    List<String> fileArr;
-/* Remove these comments
-    try{
-        // Read fileinto array here
 
-        System.out.println("\n=== Lord Count ===");
-        long wordCount = 0; // Replace with your pipeline
-        
-        System.out.println("Word count: " + wordCount);
+    public static void main(String[] args) {
 
-        System.out.println("\n=== Prison Count ===");
-        wordCount = 0; // Replace with your pipeline
-        
-        System.out.println("Word count: " + wordCount);            
+        Path file = Paths.get("hamlet.txt");
+        List<String> fileArr;
 
-    }catch (IOException e){
-        System.out.println("Error: " + e.getMessage());
+        try {
+            // Read fileinto array here
+            fileArr = Files.readAllLines(file);
+
+            System.out.println("\n=== Lord Count ===");
+            long wordCount = fileArr.stream()
+                    .flatMap(line -> Stream.of(line.split(" ")))
+                    .filter(word -> word.contains("lord"))
+                    .peek(word -> System.out.println(word))
+                    .count();
+            System.out.println("Word count: " + wordCount);
+
+            System.out.println("\n=== Prison Count ===");
+            wordCount = fileArr.stream()
+                    .flatMap(line -> Stream.of(line.split(" ")))
+                    .filter(word -> word.contains("prison"))
+                    .peek(word -> System.out.println(word))
+                    .count();
+            System.out.println("Word count: " + wordCount);
+
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
     }
-*/
-  } 
 }

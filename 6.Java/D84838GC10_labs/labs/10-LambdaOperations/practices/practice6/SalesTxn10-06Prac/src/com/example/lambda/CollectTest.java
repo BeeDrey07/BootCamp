@@ -20,6 +20,11 @@ public class CollectTest {
         System.out.println("=== Transactions over $300k ===");
         rList = tList; // Replace with sorting stream and collect            
         
+         rList.stream()
+                .filter(t -> t.getTransactionTotal() > 300000)
+                .sorted(Comparator.comparing(SalesTxn::getTransactionTotal))
+                .collect(Collectors.toList());
+         
         rList.stream()
             .forEach( t -> 
                 System.out.printf(
