@@ -1,0 +1,14 @@
+   public static void main(String[] args) throws FileNotFoundException, IOException {
+          BufferedReader games = new BufferedReader(new FileReader("C:\\Users\\Bianca\\Documents\\Bootcamp\\6.Java\\SoccerApp\\src\\main\\java\\com\\mycompany\\soccerApp\\games.txt"));
+          String[] game1 = games.readLine().split("[w,]");
+          int[] score1;
+          String[] game2 = games.readLine().split("[w,]");
+          int[] score2;
+          String[] game3 = games.readLine().split("[w,]");
+          int[] score3;
+          String[] game4 = games.readLine().split("[w,]");
+          int[] score4;
+          String[] game5 = games.readLine().split("[w,]");
+          int[] score5;
+          System.out.println(game1 + "\n" + game2 + "\n" + game3 + "\n" + game4 + "\n" + game5);
+    }
