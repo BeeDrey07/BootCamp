@@ -112,9 +112,8 @@ public class SoccerApp {
        
         Iterator<Entry<String, Integer>> iterator = sorted_scoreboard.entrySet().iterator();
         while(iterator.hasNext()) {
-            num++;
             Entry<String, Integer> entry = iterator.next();
-            System.out.println("\n" + num + "." + entry.getKey() + "\n" + entry.getValue());
+            System.out.println("\n" + ++num + "." + entry.getKey() + " " + entry.getValue());
         }
 
         try {
