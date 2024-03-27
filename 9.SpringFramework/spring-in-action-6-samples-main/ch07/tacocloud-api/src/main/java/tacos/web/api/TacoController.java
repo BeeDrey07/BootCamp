@@ -2,12 +2,18 @@ package tacos.web.api;
 
 import java.util.Optional;
 
+<<<<<<< HEAD
 import org.springframework.dao.EmptyResultDataAccessException;
+=======
+>>>>>>> c809f23 (MovieApp updated)
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.DeleteMapping;
+=======
+>>>>>>> c809f23 (MovieApp updated)
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,6 +64,7 @@ public class TacoController {
     return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
   }
   */
+<<<<<<< HEAD
   
   @DeleteMapping("/{id}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -66,5 +73,7 @@ public class TacoController {
    tacoRepo.deleteById(id);
 } catch (EmptyResultDataAccessException e) {}
   }
+=======
+>>>>>>> c809f23 (MovieApp updated)
 
 }

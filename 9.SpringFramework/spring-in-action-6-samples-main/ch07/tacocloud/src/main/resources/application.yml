@@ -24,8 +24,11 @@ spring:
     generate-unique-name: false
     name: tacocloud
 
+<<<<<<< HEAD
 server:
     port: 3000
+=======
+>>>>>>> c809f23 (MovieApp updated)
 ---
 spring:
   profiles: prod
@@ -38,5 +41,8 @@ spring:
 logging:
   level:
     tacos: WARN
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> c809f23 (MovieApp updated)

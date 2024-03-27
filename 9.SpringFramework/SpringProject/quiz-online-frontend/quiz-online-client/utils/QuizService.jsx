@@ -1,7 +1,11 @@
 import axios from "axios"
 
 export const api = axios.create({
+<<<<<<< HEAD
 	baseURL: "http://localhost:9192/api/quizzes"
+=======
+	baseURL: "http://16.16.199.219:8800/api/quizzes"
+>>>>>>> c809f23 (MovieApp updated)
 })
 
 export const createQuestion = async(quizQustion) =>{

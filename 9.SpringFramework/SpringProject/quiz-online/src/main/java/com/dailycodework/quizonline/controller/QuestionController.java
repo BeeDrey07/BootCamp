@@ -20,7 +20,11 @@ import static org.springframework.http.HttpStatus.CREATED;
  * @author Simpson Alfred
  */
 
+<<<<<<< HEAD
 @CrossOrigin("http://localhost:8080")
+=======
+@CrossOrigin("http://onlinequiz1.s3-website.eu-north-1.amazonaws.com")
+>>>>>>> c809f23 (MovieApp updated)
 @RestController
 @RequestMapping("/api/quizzes")
 @RequiredArgsConstructor

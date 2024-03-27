@@ -3,6 +3,9 @@ spring:
   datasource:
     generate-unique-name: false
     name: tacocloud
+<<<<<<< HEAD
 server:
   port : 3000
+=======
+>>>>>>> c809f23 (MovieApp updated)
 #end::setDatabaseName[]
