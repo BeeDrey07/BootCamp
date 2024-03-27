@@ -26,7 +26,7 @@ const Header = () => {
             </NavLink>
           </Nav>
           <Button variant="outline-info" className="me-2">
-            Login Testing again 123 456
+            Login
           </Button>
           <Button variant="outline-info" className="me-2">
             Register
